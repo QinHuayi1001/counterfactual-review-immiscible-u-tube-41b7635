@@ -1,0 +1,341 @@
+{
+  "artifacts_sha256": {
+    "counterfactual_equal_density_pressure/mask.mp4": "f0792a46e83a99ce726498ad1f6437bc55c4b9bc1e319730b52b1854ecdb711d",
+    "counterfactual_equal_density_pressure/mask.mp4.encoder.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "counterfactual_equal_density_pressure/mask_overlay.mp4": "f6704d0669746f41ab07aeaa7500c1e7250866bcbfeed3b4f35a11e76dfcd489",
+    "counterfactual_equal_density_pressure/mask_overlay.mp4.encoder.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "counterfactual_equal_density_pressure/prompt.txt": "e88903385764fb569fffe72c9364ae7040dcf573fd85eebfd3645fea357b0295",
+    "counterfactual_equal_density_pressure/trajectory.npz": "5c69947ae2fdfd6e2b97c8a72cbab83a604282c9b10ee82a57bb269549753b80",
+    "counterfactual_equal_density_pressure/video.mp4": "c7f861ff464f2eda6ce25bc5f13edcd21cfc23dfb1323c8b155f239aa8b24d96",
+    "counterfactual_equal_density_pressure/video.mp4.encoder.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "keyframes/cf-000.png": "30d8b0ac4192c2028021c2c6edce3e249a2e35406cbb5eeba721e580886cdfbb",
+    "keyframes/cf-024.png": "eef300f2bfd6a54ef50cb8148fb1ddc1481419be38522a20ca215c2e9bf3f271",
+    "keyframes/cf-060.png": "0c98c8f56776786c5698a7cc3a451a1676e41c771dd8f3e5b22e8afdab464fe4",
+    "keyframes/cf-093.png": "c832de05e87a49036ffe3b0b90d0a611296ed0b468a8bd291a549dd27299b0c0",
+    "keyframes/cf-119.png": "62131508e03453272966b95c26393f890b0a58f44ec49123f99f0847c2375182",
+    "keyframes/true-000.png": "30d8b0ac4192c2028021c2c6edce3e249a2e35406cbb5eeba721e580886cdfbb",
+    "keyframes/true-024.png": "eec4683981e8ae28d443958e0f3a74998ca6cfb1846e3da0f32dc8920562106e",
+    "keyframes/true-060.png": "41730bde09c5a84cc5d48dc88a9dd9391bd0ab3f984f5ad1a3580b885e7f417c",
+    "keyframes/true-093.png": "008d92f72332b43cdd65b9f44a23ae7b3a3ddfd10a06a5921eb1a67597eb87de",
+    "keyframes/true-119.png": "916b196cb75a5832c5bd69fb020eb6a79e6771b81d80f8b2f8a20ecd60727075",
+    "trajectory.json": "503f671929595401b09399b596510b8ef83b3bcb38f1045a94bdb8c05f2b1fed",
+    "true/prompt.txt": "fa52018d740ecfad6961f7a2a673cf27fbfae8364aad292544887a89ccf309aa",
+    "true/trajectory.npz": "c6fd6866079f6cab8471d4cc8debe38216324fbc0b2d4cc98f2fe04b5e304fe7",
+    "true/video.mp4": "f030ea9e6b7cfe0d33469fcc1a21ee5dff9c3c92f7b605857276f1f33ebe74d5",
+    "true/video.mp4.encoder.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "visible_masks.npz": "172ab8464d6a405bc7a1b0514adfc92fa77ac493fb687edf6a542bf4f0c8e121",
+    "web/cf.mp4": "e92a5373552ba0390293ab2e6cd0b93e0ff4765947924c65ef85a86ad5714412",
+    "web/mask.mp4": "cd65601b98c09a8d922d33341dda83f6a414bb8b0c6d8b45ae50ee3a7058ae3e",
+    "web/overlay.mp4": "e091446b24c6193f77eeadd3fa940f09ac7dd6f4344d4d4904a1c2bb60064120",
+    "web/true.mp4": "2cb1790cb6830c0de68066cf88c892e6de1faa21765670b8d9d30c7a99ad6849"
+  },
+  "browser_derivatives": {
+    "paths": {
+      "counterfactual": "web/cf.mp4",
+      "mask": "web/mask.mp4",
+      "mask_overlay": "web/overlay.mp4",
+      "true": "web/true.mp4"
+    },
+    "purpose": "browser-only lossy preview; formal evidence is the full native-resolution lossless RGB files",
+    "resolution": [
+      1024,
+      1024
+    ]
+  },
+  "camera": {
+    "elevation_deg": 7.0,
+    "fixed": true,
+    "paired": true,
+    "projection": "orthographic",
+    "yaw_deg": 5.0
+  },
+  "category": "immiscible_u_tube",
+  "cf_final_free_surface_gap_m": -3.726539060966427e-05,
+  "criteria": {
+    "cf_gap_max_m": 0.003,
+    "equilibrium_displacement_tolerance_m": 0.0007,
+    "settled_velocity_max_m_s": 0.0006,
+    "true_gap_min_m": 0.045
+  },
+  "descriptions": {
+    "counterfactual": "A transparent open U-shaped tube holds a dense liquid in both arms and the connecting bend, with a lighter immiscible oil column above the dense liquid in the left arm. The two free surfaces start at different heights while the bottom valve is closed. An actuator opens the valve and withdraws. Both liquid levels move and settle with the two free surfaces at the same height, as if the lighter oil contributed the same hydrostatic pressure per unit depth as the dense liquid, although the liquids and their actual masses remain unchanged.",
+    "true": "A transparent open U-shaped tube holds a dense liquid in both arms and the connecting bend, with a lighter immiscible oil column above the dense liquid in the left arm. The two free surfaces start at different heights while the bottom valve is closed. An actuator opens the valve and withdraws. Both liquid levels move and settle with the oil-side free surface visibly higher than the other free surface, as the two actual densities determine the pressure balance."
+  },
+  "evidence_frame": 93,
+  "first_changed_frame": 13,
+  "generation": {
+    "effective_signature": "6f5d542dab50c7c9a87704c6469285962aca5160f1e5b670512f1d56e4ae83b9",
+    "engine": "custom 1D fluid solver + Three.js 3D rendering",
+    "engine_hash": "3a2eb6277813d853533362f2231969eb14373070008f239a80553fcefcfa844e",
+    "examples_hash": "bb41adc2d4a15253e58fe2f8043e01522c8e64f31441bb57620ee05076ef2182",
+    "git": "41b763582970b581753ecac790648582f18d9c0a",
+    "profile_version": "two-liquid-u-tube-v1",
+    "runtime": {
+      "executable": "/home/ec2-user/huayi/projects/2026-09-28_hydrostatic-base-force/environment/bin/python",
+      "ffmpeg": "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2024 the FFmpeg developers",
+      "ffmpeg_sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99",
+      "os": "Linux-6.1.174-217.345.amzn2023.x86_64-x86_64-with-glibc2.34",
+      "packages": {
+        "Pillow": "11.3.0",
+        "imageio-ffmpeg": "0.6.0",
+        "numpy": "2.2.6",
+        "playwright": "1.55.0"
+      },
+      "python": "3.11.15 (main, Apr 17 2026, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+      "renderer": {
+        "actuator_support": "base-mounted pedestal and two constant 0.21 m links with elbow/wrist joints; mechanical gripper releases valve after opening",
+        "antialias": false,
+        "browser_executable": "/home/ec2-user/huayi/projects/2026-09-11_domino-chain-passthrough/environment/browser/chrome-linux64/chrome",
+        "browser_sha256": "6e55dbad4904f785f95c7962dc00696a9a5bfaaa721ef9d7e48bac5b8c394cd4",
+        "browser_version": "140.0.7339.16",
+        "camera_elevation_deg": 7,
+        "camera_position": [
+          0.25951829117288755,
+          -2.9663076416293523,
+          0.8996080302154423
+        ],
+        "camera_projection": "orthographic",
+        "camera_yaw_deg": 5,
+        "device_pixel_ratio": 1,
+        "engine": "Three.js",
+        "mask_geometry": "same meshes, camera, transforms and depth as RGB; transparent tube surfaces omitted; opaque hardware retained as black occluders",
+        "mask_target": [
+          "heavy_left",
+          "heavy_right",
+          "heavy_connected_bend",
+          "light_oil_column"
+        ],
+        "native_height": 2048,
+        "native_width": 2048,
+        "render_model": "3D meshes driven directly by integrated 1D pipe-flow states",
+        "three_revision": "160",
+        "webgl_renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "state_authority": "custom incompressible two-material tube flow; not native multiphase CFD"
+    },
+    "scale_contract_version": "CGC-v1",
+    "scaling_target_cases": 100000,
+    "scaling_target_rationale": null,
+    "seed": 303,
+    "source_digest": "2fecac13a1ec2fef05ed43881a06a348af86defc13873443481fa5dc0ace623f",
+    "src_hash": "bee6ca03f23c3107f42cf2fafcd4d3965177825a26dfb84f5456ea9eed3551f1",
+    "timestamp": "2026-11-05T09:59:53Z"
+  },
+  "intervention_frame": 13,
+  "mask_end_frame_exclusive": 120,
+  "mask_spec": {
+    "encoding": "h264-libx264rgb-crf0-rgb24-decoded-verified",
+    "include_target_shadow": false,
+    "mask_source": "violation",
+    "seg_idx": [
+      1,
+      2
+    ],
+    "source": "three.js native-size visible liquid entity/depth segmentation; transparent walls transmit liquid visibility; opaque apparatus occludes",
+    "target_entities": [
+      "heavy_liquid_in_both_arms_and_bend",
+      "light_oil_column"
+    ],
+    "temporal_rule": "from_first_changed_frame"
+  },
+  "mask_start_frame": 13,
+  "observation_tail_frames": 26,
+  "onset_frame": 13,
+  "paths": {
+    "counterfactual": {
+      "mask": "counterfactual_equal_density_pressure/mask.mp4",
+      "mask_overlay": "counterfactual_equal_density_pressure/mask_overlay.mp4",
+      "prompt": "counterfactual_equal_density_pressure/prompt.txt",
+      "trajectory": "counterfactual_equal_density_pressure/trajectory.npz",
+      "video": "counterfactual_equal_density_pressure/video.mp4"
+    },
+    "true": {
+      "prompt": "true/prompt.txt",
+      "trajectory": "true/trajectory.npz",
+      "video": "true/video.mp4"
+    }
+  },
+  "phenomenon": "immiscible_u_tube_equal_density_pressure_error",
+  "phenomenon_data": {
+    "physics_diagnostics": {
+      "counterfactual": {
+        "bend_heavy_mass_kg": 5.726143133582264,
+        "capillary_head_bound_m": 0.0004911692187320427,
+        "capillary_pressure_bound_pa": 6.095238095238095,
+        "cumulative_dissipation_j": 0.24757708318248103,
+        "cumulative_nonphysical_work_j": -0.48326130908792503,
+        "final_equilibrium_displacement_error_m": 1.863269530480438e-05,
+        "final_real_hydrostatic_pressure_difference_pa": 1454.3044504545792,
+        "final_source_closure_pressure_difference_pa": 0.46245045457913425,
+        "final_speed_m_s": 1.7245564915728374e-05,
+        "heavy_mass_kg": 10.6333799735279,
+        "kinetic_energy_scope": "cross_section_averaged_bulk_column",
+        "last_sample_physical_time_s": 9.916666666666666,
+        "light_mass_kg": 1.8426383391100218,
+        "max_dean_number_heavy": 0.5000034504706776,
+        "max_densimetric_froude": 0.08536136958265776,
+        "max_discrete_energy_balance_error_j": 1.892930256985892e-14,
+        "max_discrete_momentum_residual_n": 2.7594593277058266e-13,
+        "max_heavy_volume_error_m3": 0.0,
+        "max_light_volume_error_m3": 4.336808689942018e-19,
+        "max_mass_error_kg": 3.552713678800501e-15,
+        "max_reynolds_heavy": 1.2440419638216893,
+        "max_reynolds_light": 1.5058808356537243,
+        "max_solver_step_s": 0.002,
+        "max_speed_m_s": 0.043025166732963555,
+        "model": "incompressible_equal_bore_two_phase_rigid_column_1d",
+        "no_endpoint_clamping": true,
+        "nonphysical_pressure_offset_pa": -1453.842,
+        "not_native_multiphase_cfd": true,
+        "real_moving_mass_kg": 12.476018312637924,
+        "relaxation_womersley_heavy": 0.7221328737483982,
+        "relaxation_womersley_light": 0.7945018338764551,
+        "source_density_kg_m3": 1265.0,
+        "time_scale_physical_seconds_per_video_second": 2.0
+      },
+      "true": {
+        "bend_heavy_mass_kg": 5.726143133582264,
+        "capillary_head_bound_m": 0.0004911692187320427,
+        "capillary_pressure_bound_pa": 6.095238095238095,
+        "cumulative_dissipation_j": 0.9669620019865804,
+        "cumulative_nonphysical_work_j": 0.0,
+        "final_equilibrium_displacement_error_m": 3.685343752396486e-05,
+        "final_real_hydrostatic_pressure_difference_pa": 0.9146765219376687,
+        "final_source_closure_pressure_difference_pa": 0.9146765219376687,
+        "final_speed_m_s": 3.410983731085946e-05,
+        "heavy_mass_kg": 10.6333799735279,
+        "kinetic_energy_scope": "cross_section_averaged_bulk_column",
+        "last_sample_physical_time_s": 9.916666666666666,
+        "light_mass_kg": 1.8426383391100218,
+        "max_dean_number_heavy": 0.9876516437026992,
+        "max_densimetric_froude": 0.16861343036265644,
+        "max_discrete_energy_balance_error_j": 1.887379141862766e-14,
+        "max_discrete_momentum_residual_n": 5.579425810253724e-13,
+        "max_heavy_volume_error_m3": 0.0,
+        "max_light_volume_error_m3": 4.336808689942018e-19,
+        "max_mass_error_kg": 3.552713678800501e-15,
+        "max_reynolds_heavy": 2.4573432228257803,
+        "max_reynolds_light": 2.9745508379067,
+        "max_solver_step_s": 0.002,
+        "max_speed_m_s": 0.08498716679733428,
+        "model": "incompressible_equal_bore_two_phase_rigid_column_1d",
+        "no_endpoint_clamping": true,
+        "nonphysical_pressure_offset_pa": -0.0,
+        "not_native_multiphase_cfd": true,
+        "real_moving_mass_kg": 12.476018312637924,
+        "relaxation_womersley_heavy": 0.7221328737483982,
+        "relaxation_womersley_light": 0.7945018338764551,
+        "source_density_kg_m3": 875.0,
+        "time_scale_physical_seconds_per_video_second": 2.0
+      }
+    },
+    "scaling": {
+      "axis_buckets": {},
+      "effective_signature": "6f5d542dab50c7c9a87704c6469285962aca5160f1e5b670512f1d56e4ae83b9",
+      "kind": "fixed_development",
+      "profile_id": "development_03_wide",
+      "profile_version": "two-liquid-u-tube-v1",
+      "selection_reason": "deliberate representative of tube size, oil side and density; not a sampled CGC seed profile"
+    },
+    "scene_params": {
+      "actuator_detach_video_s": 1.0,
+      "bend_loss_k": 0.18,
+      "bend_radius_m": 0.26,
+      "camera_elevation_deg": 7.0,
+      "camera_yaw_deg": 5.0,
+      "case_id": "development_03_wide",
+      "fps": 24,
+      "frame_count": 120,
+      "gravity_m_s2": 9.81,
+      "heavy_color": "#247DB0",
+      "heavy_surface_initial_height_m": 0.86,
+      "interface_initial_height_m": 0.36,
+      "mu_heavy_pa_s": 3.675,
+      "mu_light_pa_s": 2.1,
+      "oil_color": "#D99B1A",
+      "oil_column_height_m": 0.38,
+      "oil_side": -1,
+      "rho_heavy_kg_m3": 1265.0,
+      "rho_light_kg_m3": 875.0,
+      "seed": 303,
+      "surface_tension_heavy_air_n_m": 0.063,
+      "surface_tension_interface_n_m": 0.035,
+      "surface_tension_light_air_n_m": 0.03,
+      "time_scale": 2.0,
+      "tube_inner_diameter_m": 0.084,
+      "tube_top_height_m": 1.18,
+      "tube_wall_thickness_m": 0.002,
+      "valve_effective_length_m": 0.015,
+      "valve_intervention_video_s": 0.5,
+      "valve_k_closure_scale": 0.2,
+      "valve_k_open": 0.3,
+      "valve_opening_duration_video_s": 0.3
+    },
+    "scoring_contract": {
+      "assumptions": [
+        "both ends open to the same atmospheric pressure",
+        "immiscible incompressible Newtonian liquids",
+        "oil stays in one constant-section straight arm",
+        "no pump or additional applied pressure",
+        "negligible capillarity at declared diameter"
+      ],
+      "binary_questions": [
+        "After the actuator opens the valve and withdraws, do both liquid levels adjust?",
+        "Does the lighter oil free surface remain above the dense-liquid free surface after settling?",
+        "Do the two free surfaces instead settle at the same height despite the lighter oil column?"
+      ],
+      "mask_targets": [
+        "heavy_liquid_in_both_arms_and_bend",
+        "light_oil_column"
+      ],
+      "scoring": {
+        "correct_if_true": [
+          "both phases conserve their volume",
+          "density-weighted hydrostatic pressure closes",
+          "oil-side free surface ends visibly higher"
+        ],
+        "violation_if_true": [
+          "free surfaces approach equal height despite unequal true liquid densities"
+        ]
+      },
+      "violation_types": [
+        "light_density_replaced_only_in_hydrostatic_pressure"
+      ]
+    },
+    "semantic_ground_truth": {
+      "counterfactual_endpoint": "oil_surface = heavy_surface",
+      "equal_density_limit": "operator vanishes exactly",
+      "inertia_and_phase_volumes": "actual material densities, identical laws in both branches",
+      "simulator_native_multiphase_CFD": false,
+      "single_violation": "light_density_replaced_only_in_hydrostatic_pressure",
+      "source_equivalence_disclosed": "Constant oil-column height makes source increment equivalent to a constant head bias, but material/True/CF endpoint content differs from PR500; user explicitly authorized continuation.",
+      "state_authority": "incompressible two-material 1D tube-flow reduced model",
+      "true_endpoint": "rho_light*g*oil_height = rho_heavy*g*(heavy_surface-interface)"
+    }
+  },
+  "render": {
+    "camera": "fixed oblique 3D camera shared by pair; explicit user request",
+    "duration_s": 5,
+    "fps": 24,
+    "n_frames": 120,
+    "native_render_res": [
+      2048,
+      2048
+    ],
+    "res": [
+      2048,
+      2048
+    ],
+    "time_mapping": {
+      "physical_seconds_per_video_second": 2.0,
+      "source_sample_interval_s": 0.08333333333333333
+    }
+  },
+  "review_scope": "exactly 3 Development examples, no Gate B/C, no Full, no human acceptance",
+  "stability_window_frames": 12,
+  "stage": "Development",
+  "task_id": "immiscible_u_tube_equal_density_pressure_error_00000303",
+  "true_final_free_surface_gap_m": 0.11708044332258061,
+  "violation_type": "light_density_replaced_only_in_hydrostatic_pressure"
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "counterfactual-runtime-witness-audit-v1",
+  "pass": true,
+  "generator": "immiscible_u_tube_equal_density_pressure_error",
+  "case_set": "Development-3-seeds-101-202-303",
+  "commit": "41b763582970b581753ecac790648582f18d9c0a",
+  "artifact_count": 94,
+  "accepted_case_count": 3,
+  "failures": []
+}

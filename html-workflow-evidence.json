@@ -1,0 +1,80 @@
+{
+  "revision": "main@2d87871f8a83c30a10ba1c0fc8fac03f640ad18c;dev@27bdebdf40330ce4da512efab5484308a5b8c280",
+  "builder": "generator-specific examples/build_review_html.py",
+  "template": "engine/review_html.py",
+  "builder_source_sha256": "d6a4dfefadac8bd912cbf8fee1af8e6303943f6a83edbfbe07a1fabf23df6428",
+  "htmlSkill": {
+    "revision": "d3a9a2f1d1f942381b81d871c03669b66a79ef9f",
+    "sha256": "636b5697cd669d8aa74c6defa3cc3e99e838d56c21a20c69bdf6897df04e38fa"
+  },
+  "reference": {
+    "url": "https://13-216-208-230.sslip.io/demos/2026-09-11_domino-chain-passthrough/?revision=f73c65c",
+    "sha256": "e6b3f38ff197b5227b7a0df8d3ee0385d7d37759227156b75083a524c9038a9d",
+    "requested_revision": "f73c65c"
+  },
+  "adaptations": [
+    "three current Development cases",
+    "density-weighted pressure mechanism",
+    "exact source/evidence binding",
+    "formal/browser-copy separation",
+    "collapsed complete metadata",
+    "continuous group playback without recurring seeks"
+  ],
+  "stage": "Development",
+  "head_sha": "41b763582970b581753ecac790648582f18d9c0a",
+  "evidence_identity": "eb9ee584295ced3bc885a36f0c90073ff6db959b554dd480a5b4cba0f4289f97",
+  "validation": {
+    "status": "PASS",
+    "checks": {
+      "three_cases": true,
+      "twelve_players": true,
+      "complete_prompts": true,
+      "metadata_collapsed": true,
+      "full_head_present": true,
+      "human_pending": true,
+      "browser_copies_disclosed": true,
+      "no_periodic_seek_sync": true,
+      "artifact_hashes_rechecked": true,
+      "scope_and_stage_visible": true,
+      "all_local_references_exist": true
+    }
+  },
+  "browserPlayback": {
+    "status": "PENDING",
+    "reason": "Must be verified against the published page; builder never asserts playback or human review"
+  },
+  "publicHttp": {
+    "status": "PENDING"
+  },
+  "humanReview": "pending",
+  "generated_at": "2026-11-05T15:02:56.401263+00:00",
+  "command": [
+    "examples/build_review_html.py",
+    "--root",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/renders/development-41b7635",
+    "--report",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/formal-41b7635/independent-decoded-audit.json",
+    "--out",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/review/final-41b7635",
+    "--head",
+    "41b763582970b581753ecac790648582f18d9c0a",
+    "--pr-url",
+    "https://github.com/hipo-dev/counterfactual-data/pull/739",
+    "--workflow-revision",
+    "main@2d87871f8a83c30a10ba1c0fc8fac03f640ad18c;dev@27bdebdf40330ce4da512efab5484308a5b8c280",
+    "--scale-report",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/formal-41b7635/scale-readiness-final.json",
+    "--review-summary",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/formal-41b7635/final-review.json",
+    "--witness",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/formal-41b7635/runtime-witness.json",
+    "--witness-index",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/formal-41b7635/runtime-witness-index.json",
+    "--provenance-audit",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/formal-41b7635/runtime-provenance-audit.json",
+    "--reference-html",
+    "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/audit/contracts-control-dedup/domino-reference.html"
+  ],
+  "index_sha256": "5725329156263b145ebf9f90593c06ae1cbb4f3f9355da33f116bc02d42d1590",
+  "evidencePath": "html-workflow-evidence.json"
+}

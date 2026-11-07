@@ -1,0 +1,128 @@
+{
+  "schema": "immiscible-u-tube-scale-readiness/v2",
+  "generated_at": "2026-11-05T15:02:55.687412+00:00",
+  "generator": "immiscible_u_tube_equal_density_pressure_error",
+  "generator_path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error",
+  "stage": "Development",
+  "overall_status": "NOT VERIFIED",
+  "overall_reason": "Static population, controlled primary-axis diagnostics, formal three-example rendered diversity and decoded/provenance audits pass at this head; overall generator acceptance, Full-stage acceptance and human review remain separate decisions.",
+  "status_by_scope": {
+    "static_population": "PASS",
+    "controlled_rendered_primary_axis_diversity": "PASS",
+    "formal_three_example_rendered_diversity": "PASS",
+    "production_bookkeeping_tests": "PASS",
+    "decoded_media_and_provenance": "PASS",
+    "overall_generator_acceptance": "NOT VERIFIED",
+    "human_review": "PENDING"
+  },
+  "source_binding": {
+    "head_sha": "41b763582970b581753ecac790648582f18d9c0a",
+    "source_digest": "2fecac13a1ec2fef05ed43881a06a348af86defc13873443481fa5dc0ace623f",
+    "source_digest_algorithm": "SHA-256 of json.dumps(relative-path-to-file-SHA256 mapping, sort_keys=True), matching engine.run.source_record",
+    "source_clean_before": true,
+    "source_clean_after": true,
+    "source_files": {
+      ".gitignore": "db987b88a9befe8e0b5497e677771b4a32826510d3b71807051e891f0c389d9e",
+      "CITATION.cff": "750dd472bbfecfe12cd4704158cbf59d0a5b1d2a77579671cabdaf109043ecd4",
+      "LICENSE": "110eb4c6651242ed7343d4878fd2b7e66d335ddfb335d566cef8f83f5212081e",
+      "README.md": "2317764096da759b5255423a35a296de7af2818e528b59ce7ca1f402ee5b47fb",
+      "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "engine/audit.py": "10c2a4db4d86f6784024ee4b3c8470670ca48aef1b81b6283b61cc2b139776f5",
+      "engine/driver.py": "f138c3d548501f34d5d0b0fcffcc8715fd94937a74131e2184204fe5e5944e7c",
+      "engine/media.py": "61558d26e05de6a72379c284966e12846df0aae328c51d227dd348704b2866d1",
+      "engine/operators.py": "ab9e5ca502042fd41b56dabd0598c08dc5b6350ef9dda5c8a363d1973c4d345f",
+      "engine/render.py": "70d9bf9a5227545d5268981ae10779af3ca7d53465420df062214e8b5ebf42f7",
+      "engine/review_html.py": "d6a4dfefadac8bd912cbf8fee1af8e6303943f6a83edbfbe07a1fabf23df6428",
+      "engine/run.py": "51c175a0c0c97065708291c04cb0de43019ce90f9247f3a2cc2ba9e6cfa8c02f",
+      "engine/spec.py": "d378b93577a952ddc5ad224a1bd2b4b7b8dc60adb681b04531cc841f1febed02",
+      "evidence/operator-equivalence-check.json": "777b51ad0e6027cd1efc24b01c68b3d7685d8e8dc7decb9400ad083bcb10f29f",
+      "evidence/original-dedup-decision.json": "2b21fd3072fcf20417d9d3cc3b7d9bcfd9d7226b35b4c6470c899f015b7cba78",
+      "evidence/resume-decision.json": "000386aae600a0e264c8a2b606f74edf06574d9e91fa91388065bf4bfce58edf",
+      "examples/audit_batch.py": "af68b002c85a07f353735a8366d83ae54214676ce56c04218451e11129b490c4",
+      "examples/audit_scaling.py": "db2d7ea12040139f9e683e08f04bf050e2e668e66270fb9a428e0d9c3cee8764",
+      "examples/build_review_html.py": "66914acb3105f82d2b1af04718d085fd7d5863789994cbf772c7fd5e0e9cf766",
+      "examples/compare.py": "35aba937b1df7ced18ec51f714be8d2a9db3e7856c4813cae948965f3c4162b5",
+      "examples/generate.py": "53d31ac4c719770100a925d30e392e035bbccb8bdc2506ffc93a936fe5accca3",
+      "examples/probe_axes.py": "06d6b8cae9a7ad2c84c39cf670a138a5884a5ecd701c17c1f07c7f18199fd5dd",
+      "examples/reproduce.py": "a0c29151085a59ae97ca0bca025923c9bc969bfe0a5b116a2751cbb236241471",
+      "renderer/THREE-LICENSE.txt": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+      "renderer/scene.html": "ad42df84a803d42417468297c64f83a24fcf340d151eb4cb961882a14dd7474f",
+      "renderer/scene.js": "5707e4dfc7797344d109be3ec5bddb5c28e532ccadc956dc34928a86ccda6cb0",
+      "renderer/three.module.js": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495",
+      "requirements.txt": "23bd016acf94aec2a3e4065535eac31e8175b66a2a7d4a6c169af6cd0bf683a3",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/parameters.py": "b374209e20bf9679f43a73494ca7b35563905c767347e5d391bf3fdae456e528",
+      "src/phenomenon.py": "79084919832ca260828e0a516e7a8087c280a60a35ffc587cb4e77b899facf27",
+      "src/physics.py": "630ace1261fd9630e80c1430f41cae3a4ce8f7273022f47ddf69bc56ab94dce8",
+      "src/scaling.py": "3a5699d06d80da31ebd900881b3315c9013edc28531ded849137d5dd9ed9d57b",
+      "src/violation.py": "044c6e6e8974cadffc76c2bdcae8a62123cc570443604545abac36db2f79b1d7",
+      "tests/test_physics.py": "655960b4811cd5b6300035e00e7c5fda5d78d143252ce3660e86d420ac1f1daf",
+      "tests/test_production.py": "9b52867017e012ce8ee04f60011266efe77edc26241756958bd8cbd9861ff5a3",
+      "tests/test_scaling.py": "51cc7c12e4f8b6ba0d64aaa67a3e9061b929cbc625d5e682145825a1b58fe81e"
+    },
+    "official_python": "/home/ec2-user/huayi/projects/2026-09-28_hydrostatic-base-force/environment/bin/python",
+    "no_source_changes": true,
+    "all_artifacts_created_or_read_on": "authorized EC2; no media downloaded to Mac"
+  },
+  "static_population": {
+    "status": "PASS",
+    "requested_audit_samples": 100000,
+    "accepted_static": 100000,
+    "distinct_profile_ids": 100000,
+    "distinct_effective_signatures": 100000,
+    "profile_space_size": 16777216,
+    "axis_bucket_coverage": {
+      "camera_yaw": 1.0,
+      "density_ratio": 1.0,
+      "heavy_tint": 1.0,
+      "oil_column": 1.0,
+      "tube_bore": 1.0,
+      "valve_onset": 1.0
+    },
+    "limitation": "100000 profiles were statically enumerated and validated; no claim of 100000 rendered videos or simulated cases.",
+    "canonical_report_sha256": "ebe9d3409d3683a86f68f7b8a2c0f432b65436f0a292a97859a82d3392b4b205",
+    "canonical_binding_sha256": "16175ba1d370527726e7df62dae559152b78fa52f63bc5eb2fcafa0698aa9273",
+    "checker_unmodified": true,
+    "binding_source_digest_matches": true
+  },
+  "controlled_rendered_primary_axis_diversity": {
+    "status": "PASS",
+    "primary_axes": 4,
+    "controlled_variants": 8,
+    "native_dimensions": [
+      512,
+      512
+    ],
+    "diagnostic_scope": "Matched-seed low/high perturbations of primary geometry, dynamics and event axes; separate from the three formal Development examples.",
+    "probe_report_sha256": "b1568ca39d6eec89f561c33d073f2880c8e20514ac69f00aff8d0f48d57b5568",
+    "probe_decision": "PASS",
+    "probe_source_head": "41b763582970b581753ecac790648582f18d9c0a",
+    "probe_source_digest": "2fecac13a1ec2fef05ed43881a06a348af86defc13873443481fa5dc0ace623f",
+    "limitation": "Controlled 512 diagnostics; they are not additional Development display examples."
+  },
+  "formal_three_example_rendered_diversity": {
+    "status": "PASS",
+    "expected_formal_development_examples": 3,
+    "report_sha256": "e12cf494510e1ea029195d1ac1945931315e3a103b7cad0a4fc0be1a47a9cf56",
+    "cases": [
+      "immiscible_u_tube_equal_density_pressure_error_00000101",
+      "immiscible_u_tube_equal_density_pressure_error_00000202",
+      "immiscible_u_tube_equal_density_pressure_error_00000303"
+    ],
+    "pairwise_decoded_differences": 6,
+    "extra_displayed_cases": 0
+  },
+  "production_bookkeeping_tests": {
+    "status": "PASS",
+    "test_source": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/tests",
+    "reported_summary": "27 passed in 2.05s",
+    "junit_sha256": "38f4c137eeb095dcdddcf4deef0b2d5dcb437e043de36f4e0c0e88ee730f8c6e",
+    "scope": "Model, scaling and production-bookkeeping test suite executed from the committed source at this head."
+  },
+  "reviewer_independence": "Physics, parameters and scaling were authored by other agents; the orchestration, the independent decoded audit and the browser verification for this revision were executed separately against the committed source.",
+  "verification_instructions": [
+    "Bind every artifact to the exact head and source digest before reuse.",
+    "Treat the binary mask contract and the red overlay as separate artefacts.",
+    "Keep the human acceptance decision separate from this automatic evidence."
+  ]
+}

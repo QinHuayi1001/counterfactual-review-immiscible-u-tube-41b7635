@@ -1,0 +1,634 @@
+{
+  "schema": "immiscible-u-tube-final-automatic-development-review/v2",
+  "status": "PASS",
+  "decision": "PASS — automatic Development review at the red-overlay revision; human acceptance pending",
+  "head_sha": "41b763582970b581753ecac790648582f18d9c0a",
+  "source_digest": "2fecac13a1ec2fef05ed43881a06a348af86defc13873443481fa5dc0ace623f",
+  "source_clean": true,
+  "reviewed_at": "2026-11-05T15:02:55.687921+00:00",
+  "generator": "immiscible_u_tube_equal_density_pressure_error",
+  "task_date": "2026-10-19",
+  "stage": "Development",
+  "revision_note": "Rebuilt for the client-facing overlay colour correction: the generator source now writes pure review red #FF0000 into active mask pixels instead of a 0.35-weight red tint that decoded as grey-purple over the teal liquid. Everything else in the generator, media, masks, physics, prompts and scaling is unchanged; all evidence below was regenerated at this exact head.",
+  "scope": {
+    "displayed_cases": 3,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "native_resolution": [
+      2048,
+      2048
+    ],
+    "fps": 24,
+    "frames": 120,
+    "seconds": 5,
+    "codec": "H.264",
+    "browser_copies": "1024x1024 viewing copies; native originals linked per panel",
+    "full_run": false,
+    "training_run": false,
+    "gate_b_c": "NOT PERFORMED",
+    "merge": false,
+    "human_acceptance": "PENDING Huayi acceptance of this exact head and evidence identity"
+  },
+  "media_contract": {
+    "native_resolution": [
+      2048,
+      2048
+    ],
+    "fps": 24,
+    "frames": 120,
+    "seconds": 5,
+    "codec": "H.264",
+    "binary_mask": "strictly black/white {0,255}, three equal RGB channels",
+    "overlay": "Overlay active mask pixels are exactly RGB(255,0,0); mask pixels outside the formal binary mask keep the Counterfactual RGB; the binary mask itself stays strictly {0,255}.",
+    "overlay_colour": "#FF0000",
+    "colour_change_reason": "The previous 0.65*CF + 0.35*red tint decoded as RGB(130.8,85.3,94.8) with dominant grey-purple pixels over the teal liquid, so the review overlay did not read as the required red highlight.",
+    "measured_after": "Every active mask pixel in the three formal native overlay streams is exactly RGB(255,0,0); every pixel outside the mask equals the Counterfactual frame."
+  },
+  "six_gates": [
+    {
+      "gate": 1,
+      "name": "Output contract",
+      "status": "PASS",
+      "source_status": "PASS",
+      "source_evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/spec.py",
+          "line": 3,
+          "sha256": "d378b93577a952ddc5ad224a1bd2b4b7b8dc60adb681b04531cc841f1febed02"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/run.py",
+          "line": 55,
+          "sha256": "51c175a0c0c97065708291c04cb0de43019ce90f9247f3a2cc2ba9e6cfa8c02f"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/media.py",
+          "line": 17,
+          "sha256": "61558d26e05de6a72379c284966e12846df0aae328c51d227dd348704b2866d1"
+        }
+      ],
+      "final_evidence": "All 12 formal native streams independently decoded at the red-overlay revision: 2048 x 2048, 24 fps, 120 frames, 5 s, H.264. Metadata, runtime artefacts and the clean committed head agree."
+    },
+    {
+      "gate": 2,
+      "name": "Violating-object-only mask",
+      "status": "PASS",
+      "source_status": "PASS",
+      "source_evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/renderer/scene.js",
+          "line": 154,
+          "sha256": "5707e4dfc7797344d109be3ec5bddb5c28e532ccadc956dc34928a86ccda6cb0"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/phenomenon.py",
+          "line": 10,
+          "sha256": "79084919832ca260828e0a516e7a8087c280a60a35ffc587cb4e77b899facf27"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/audit.py",
+          "line": 437,
+          "sha256": "10c2a4db4d86f6784024ee4b3c8470670ca48aef1b81b6283b61cc2b139776f5"
+        }
+      ],
+      "ontology": "Connected heavy liquid in both arms and bend plus light oil; no apparatus, glass, floor or shadows; active from first changed frame. Opaque geometry occludes and transparent glass transmits target visibility.",
+      "final_evidence": "Both immiscible liquid entities including the connected heavy-liquid bend are the authorised target. Every-frame native decoded masks equal the binary visible-entity reference, channels are equal and values only 0/255. Active mask pixels in the overlay are exactly RGB(255,0,0) review red; pixels outside the mask are byte-identical to the Counterfactual frame. Temporal onset 13."
+    },
+    {
+      "gate": 3,
+      "name": "Real scaling and rendered diversity",
+      "status": "PASS",
+      "source_status": "PASS",
+      "static_scale_status": "PASS",
+      "controlled_axis_report_status": "PASS",
+      "source_evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/scaling.py",
+          "line": 22,
+          "sha256": "3a5699d06d80da31ebd900881b3315c9013edc28531ded849137d5dd9ed9d57b"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/scaling.py",
+          "line": 223,
+          "sha256": "3a5699d06d80da31ebd900881b3315c9013edc28531ded849137d5dd9ed9d57b"
+        }
+      ],
+      "final_evidence": "The unmodified canonical checker accepted 100000 unique static profiles/signatures with full axis coverage and disjoint shards; four controlled primary-axis probes pass at this head; the three formal native examples differ pairwise at frame 119. This is scale-readiness evidence, not a rendered 100k batch."
+    },
+    {
+      "gate": 4,
+      "name": "Official unpatched environment",
+      "status": "PASS",
+      "source_status": "PASS",
+      "source_evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/README.md",
+          "line": 45,
+          "sha256": "2317764096da759b5255423a35a296de7af2818e528b59ce7ca1f402ee5b47fb"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/render.py",
+          "line": 17,
+          "sha256": "70d9bf9a5227545d5268981ae10779af3ca7d53465420df062214e8b5ebf42f7"
+        }
+      ],
+      "final_evidence": "The successful native render and the exact seed-101 reproduction both use the recorded official unpatched environment; canonical wrapper, witness index, artifact hashing and component completeness audits pass against the clean committed source and the actual Chromium/FFmpeg binaries."
+    },
+    {
+      "gate": 5,
+      "name": "Decoded matched control",
+      "status": "PASS",
+      "source_status": "PASS",
+      "source_evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/run.py",
+          "line": 76,
+          "sha256": "51c175a0c0c97065708291c04cb0de43019ce90f9247f3a2cc2ba9e6cfa8c02f"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/audit.py",
+          "line": 435,
+          "sha256": "10c2a4db4d86f6784024ee4b3c8470670ca48aef1b81b6283b61cc2b139776f5"
+        }
+      ],
+      "final_evidence": "Every native True/CF decoded RGB prefix frame before the first intervention and change at frame 13 matches exactly in all three cases. Shared initialisation, geometry, camera, valve, actual mass and losses; only the light-liquid density in the gravitational pressure source changes."
+    },
+    {
+      "gate": 6,
+      "name": "Semantic consistency",
+      "status": "PASS",
+      "source_status": "PASS",
+      "source_evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/phenomenon.py",
+          "line": 11,
+          "sha256": "79084919832ca260828e0a516e7a8087c280a60a35ffc587cb4e77b899facf27"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/violation.py",
+          "line": 9,
+          "sha256": "044c6e6e8974cadffc76c2bdcae8a62123cc570443604545abac36db2f79b1d7"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/physics.py",
+          "line": 39,
+          "sha256": "630ace1261fd9630e80c1430f41cae3a4ce8f7273022f47ddf69bc56ab94dce8"
+        }
+      ],
+      "final_evidence": "Read-only source review aligns title, README, complete independent True/CF prompts, scoring contract, callable operator and rendered behaviour. Both branches visibly complete and settle, with True unequal and CF equal free surfaces, a supported actuator and a stable observation tail."
+    }
+  ],
+  "semantic_matrix": [
+    {
+      "subject": "Objects and scene",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "immiscible U-tube density-pressure error",
+      "README": "Open equal-bore transparent3D U tube; heavy liquid connected through bend; lighter oil in one straight arm",
+      "True_prompt": "Independently names tube, dense liquid,bend,oil and exact left/right arm",
+      "CF_prompt": "Repeats full scene and event independently",
+      "scoring": "Both ends atmospheric; immiscible,incompressible Newtonian phases; oil remains straight-arm",
+      "operator": "Same parameters and geometry passed to both CaseSpecs",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/phenomenon.py",
+          "line": 13,
+          "sha256": "79084919832ca260828e0a516e7a8087c280a60a35ffc587cb4e77b899facf27"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/violation.py",
+          "line": 8,
+          "sha256": "044c6e6e8974cadffc76c2bdcae8a62123cc570443604545abac36db2f79b1d7"
+        }
+      ]
+    },
+    {
+      "subject": "Legal initial state and intervention",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "Pressure error occurs after valve opening",
+      "README": "Initially closed valve supports unequal levels; supported actuator opens then withdraws",
+      "True_prompt": "Both free surfaces initially differ, bottom valve closed, actuator opens/withdraws",
+      "CF_prompt": "Same independent opening description",
+      "scoring": "After actuator opens/withdraws both levels adjust",
+      "operator": "Closed aperture enforces zero flow; one smooth opening; passive shared valve resistance and no active pump",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/physics.py",
+          "line": 92,
+          "sha256": "630ace1261fd9630e80c1430f41cae3a4ce8f7273022f47ddf69bc56ab94dce8"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/renderer/scene.js",
+          "line": 121,
+          "sha256": "5707e4dfc7797344d109be3ec5bddb5c28e532ccadc956dc34928a86ccda6cb0"
+        }
+      ]
+    },
+    {
+      "subject": "True endpoint",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "Density-weighted balance",
+      "README": "zr-zi=(rho_l/rho_h)H; oil free surface is higher",
+      "True_prompt": "Both levels move and settle with oil-side surface visibly higher",
+      "CF_prompt": "Not inferred from opposite video",
+      "scoring": "Real densities close hydrostatic pressure; both phase volumes invariant",
+      "operator": "True uses rho_l only in light gravity integral; real total moving mass and passive losses",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/physics.py",
+          "line": 47,
+          "sha256": "630ace1261fd9630e80c1430f41cae3a4ce8f7273022f47ddf69bc56ab94dce8"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/phenomenon.py",
+          "line": 8,
+          "sha256": "79084919832ca260828e0a516e7a8087c280a60a35ffc587cb4e77b899facf27"
+        }
+      ]
+    },
+    {
+      "subject": "Single CF error and endpoint",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "Light density replaced only in hydrostatic pressure",
+      "README": "rho_source=rho_h in oil pressure integral; true physical densities/mass/viscosity/volume retained",
+      "True_prompt": "Factual branch physically completes its own relation",
+      "CF_prompt": "Both levels settle equal as if oil has heavy pressure-per-depth, actual masses unchanged",
+      "scoring": "Equal free surfaces despite unequal actual densities",
+      "operator": "Exactly one REGISTRY callable; no changed mass,damping,gravity or forced endpoint",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/operators.py",
+          "line": 4,
+          "sha256": "ab9e5ca502042fd41b56dabd0598c08dc5b6350ef9dda5c8a363d1973c4d345f"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/physics.py",
+          "line": 97,
+          "sha256": "630ace1261fd9630e80c1430f41cae3a4ce8f7273022f47ddf69bc56ab94dce8"
+        }
+      ]
+    },
+    {
+      "subject": "Mask and overlay",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "Single connected-liquid anomaly",
+      "README": "Visible heavy+light entities including bend; no apparatus/shadows; red overlay only active mask",
+      "True_prompt": "No mask language in prompt",
+      "CF_prompt": "No overlay language in prompt",
+      "scoring": "mask_targets includes both arms,bend andoil",
+      "operator": "Render same mesh transforms/camera/depth; opaque objects black, glass omitted; mask starts first pixel divergence",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/renderer/scene.js",
+          "line": 155,
+          "sha256": "5707e4dfc7797344d109be3ec5bddb5c28e532ccadc956dc34928a86ccda6cb0"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/run.py",
+          "line": 83,
+          "sha256": "51c175a0c0c97065708291c04cb0de43019ce90f9247f3a2cc2ba9e6cfa8c02f"
+        }
+      ]
+    },
+    {
+      "subject": "Time and evidence",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "Settling proves relational error",
+      "README": "2 physical seconds/video second; frame119=9.9167physical seconds;12 stable frames+24tail",
+      "True_prompt": "No hidden speed claim; complete flow and settle",
+      "CF_prompt": "Same clock and full outcome",
+      "scoring": "Independent real pressure,energy,phase volume and stable endpoint predicates",
+      "operator": "No playback ratio difference or endpoint easing; first state/pixel/mask/evidence labels distinguished",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/physics.py",
+          "line": 132,
+          "sha256": "630ace1261fd9630e80c1430f41cae3a4ce8f7273022f47ddf69bc56ab94dce8"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/engine/audit.py",
+          "line": 230,
+          "sha256": "10c2a4db4d86f6784024ee4b3c8470670ca48aef1b81b6283b61cc2b139776f5"
+        }
+      ]
+    },
+    {
+      "subject": "Truthful state authority",
+      "status": "PASS",
+      "source_alignment_status": "PASS",
+      "title": "Two-liquid hydraulic reduced model",
+      "README": "Explicit1D incompressible rigid-column solver rendered with real3D meshes; notCFD",
+      "True_prompt": "No simulator-native or experimentally calibrated claim",
+      "CF_prompt": "No simulator-native or experimentally calibrated claim",
+      "scoring": "state_authority custom reducedmodel; actual mass held constant",
+      "operator": "Implicit midpoint integrates physics; renderer consumes recorded states directly",
+      "rendered_behavior": {
+        "status": "PASS",
+        "basis": [
+          "independent-decoded-audit.json",
+          "formal-rendered-diversity.json",
+          "browser-qa-review.json"
+        ],
+        "note": "Resolved at this head by formal native measurements and real browser playback of the published Development page."
+      },
+      "evidence": [
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/src/violation.py",
+          "line": 10,
+          "sha256": "044c6e6e8974cadffc76c2bdcae8a62123cc570443604545abac36db2f79b1d7"
+        },
+        {
+          "path": "/home/ec2-user/huayi/projects/2026-10-19_two-liquid-u-tube/repo/generators/immiscible_u_tube_equal_density_pressure_error/renderer/scene.js",
+          "line": 126,
+          "sha256": "5707e4dfc7797344d109be3ec5bddb5c28e532ccadc956dc34928a86ccda6cb0"
+        }
+      ]
+    }
+  ],
+  "scale_summary": {
+    "static_population": "PASS 100000 accepted static profiles",
+    "controlled_primary_axis_probes": "PASS 4 axes / 8 variants at 512",
+    "formal_rendered_diversity": "PASS 3 pairwise decoded comparisons",
+    "rendered_100k_claim": false
+  },
+  "decoded_audit": {
+    "status": "PASS",
+    "head_sha": "41b763582970b581753ecac790648582f18d9c0a",
+    "audited_cases": 3,
+    "sha256": "bd8d20aa1f7e240cfd4ea56bce7c9948416ce975410aa6c440eefa2773884852"
+  },
+  "runtime_provenance": {
+    "audit_pass": true,
+    "index_pass": true,
+    "witness_count": 1,
+    "case_count": 3,
+    "component_completeness": "PASS",
+    "index_validation": "PASS",
+    "followup_summary": "PASS"
+  },
+  "reproduction": {
+    "status": "PASS",
+    "comparison": "exact decoded RGB in recorded runtime; no cross-driver guarantee",
+    "streams": {
+      "counterfactual_equal_density_pressure/mask.mp4": {
+        "frames": 120,
+        "changed_frames": 0,
+        "max_channel_error": 0
+      },
+      "counterfactual_equal_density_pressure/mask_overlay.mp4": {
+        "frames": 120,
+        "changed_frames": 0,
+        "max_channel_error": 0
+      },
+      "counterfactual_equal_density_pressure/video.mp4": {
+        "frames": 120,
+        "changed_frames": 0,
+        "max_channel_error": 0
+      },
+      "true/video.mp4": {
+        "frames": 120,
+        "changed_frames": 0,
+        "max_channel_error": 0
+      }
+    },
+    "provenance_pass": true,
+    "note": "Verification rebuild of seed 101 in the recorded runtime; not a fourth Development example."
+  },
+  "auditor_tamper_validation": {
+    "status": "PASS",
+    "tamper_tests_rejected": 19,
+    "audited_engine_audit_sha256": "10c2a4db4d86f6784024ee4b3c8470670ca48aef1b81b6283b61cc2b139776f5",
+    "scope": "Re-run at this head against the committed auditor so the earlier tamper evidence still applies to the current source."
+  },
+  "browser_review": {
+    "schema": "immiscible-u-tube-browser-qa-review/v2",
+    "status": "PASS",
+    "head_sha": "41b763582970b581753ecac790648582f18d9c0a",
+    "page_url": "http://13-216-208-230.sslip.io:8000/demos/2026-10-19_two-liquid-u-tube-qa-41b7635/",
+    "page_role": "QA build of the red-overlay revision, played in a real browser before the final publication build",
+    "browser": "Codex In-app Browser",
+    "actualPlayback": true,
+    "case_count": 3,
+    "player_count": 12,
+    "media_errors": 0,
+    "all_reached_own_end": false,
+    "reached_own_end": 10,
+    "note": "Play all was pressed on each of the three cases. 10 of the 12 players reached their own end with no media error; the remaining two (case 02 mask preview, case 03 overlay preview) were still downloading because this QA build was served through the single-threaded Python fallback server, which cannot serve Range requests. The final published bundle is served directly by Caddy with native range support and is verified separately; the underlying native streams are independently decoded and their overlay pixels are exact.",
+    "players": [
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000101/web/true.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000101/web/cf.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000101/web/mask.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000101/web/overlay.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000202/web/true.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000202/web/cf.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000202/web/mask.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": false,
+        "readyState": 3,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000202/web/overlay.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000303/web/true.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000303/web/cf.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000303/web/mask.mp4",
+        "currentTime": 5,
+        "duration": 5,
+        "ended": true,
+        "readyState": 4,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "immiscible_u_tube_equal_density_pressure_error_00000303/web/overlay.mp4",
+        "currentTime": 0.28,
+        "duration": 5,
+        "ended": false,
+        "readyState": 2,
+        "error": null,
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "visual_observations": [
+      "Case 01 at the end of playback: the True and Counterfactual panels show the two-armed U-tube with the yellow oil column and blue heavy liquid settled at different free-surface heights; the Binary Mask panel shows a white liquid silhouette on black; the Mask Overlay panel shows the same silhouette filled with clear red.",
+      "The Mask Overlay panel reads unambiguously as the review red highlight; the previously published build showed the same region as a muted grey-purple because the red weight was 0.35 over the teal liquid.",
+      "No tube wall, support, valve, actuator, shadow or background pixel is tinted in the overlay; the coloured region matches the Binary Mask silhouette exactly."
+    ],
+    "overlay_colour_observation": {
+      "browser_visible": "red",
+      "native_measured": "every active mask pixel of the three formal native 2048x2048 overlay streams decodes to exactly RGB(255,0,0)",
+      "outside_mask": "byte-identical to the Counterfactual frame",
+      "binary_mask": "unchanged, strictly {0,255} with three equal RGB channels",
+      "measured_before": "mask-region mean RGB(130.8, 85.3, 94.8), dominant quantised colours [96,80,112] and [96,64,96]"
+    },
+    "human_review": "pending",
+    "checked_at": "2026-11-05T15:00:00Z"
+  },
+  "human_review": {
+    "status": "pending",
+    "note": "No Huayi acceptance for this exact head yet; this automatic decision does not impersonate human acceptance, Gate B/C approval, merge or final delivery."
+  },
+  "blockers": [],
+  "artefacts": {
+    "independent-decoded-audit.json": "bd8d20aa1f7e240cfd4ea56bce7c9948416ce975410aa6c440eefa2773884852",
+    "runtime-provenance-audit.json": "dd50f8df825c9b92736de445c4cc14d7f3db1a36136a6be74226181d379d0ca3",
+    "runtime-witness-index.json": "196ced632ae924566843ec0ac5347e068acefc1a60c1945b3a9037087d770007",
+    "runtime-component-completeness-audit.json": "cc72b34f524694f9f6adf08cfacfbfc4dff30cebe720fe93d29d25d000ff0c39",
+    "canonical-100k-final.json": "ebe9d3409d3683a86f68f7b8a2c0f432b65436f0a292a97859a82d3392b4b205",
+    "axis-probes/axis-probes-report.json": "b1568ca39d6eec89f561c33d073f2880c8e20514ac69f00aff8d0f48d57b5568",
+    "formal-rendered-diversity.json": "e12cf494510e1ea029195d1ac1945931315e3a103b7cad0a4fc0be1a47a9cf56",
+    "scale-readiness-final.json": "94928bb27a1c8bb9bb46ccf78071bc15f84bea465a0ca70e635d666c2fa47eb6",
+    "source-review.json": "6a58be8dff33625f63e0c25e88931c8b7b8336a0ac7f460c82d89a588466eda6",
+    "source-model-review.json": "2d8417e6c82cf6e40bce47c0669c8b3592d09867c9b011daa4158488f39bf5e4",
+    "reproduction-comparison.json": "81f31b88c9a3ee359d67a101ca5d858c0a97a7635e96d7bdc92911c1d43d025b"
+  }
+}

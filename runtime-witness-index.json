@@ -1,0 +1,33 @@
+{
+  "schema_version": "counterfactual-runtime-witness-index-v1",
+  "pass": true,
+  "witness_count": 1,
+  "case_count": 3,
+  "witnesses": {
+    "5cb72d30fdd2039fe1c6a329d7aa453ca7fc953add42e30f4953761e4233bfa0": {
+      "path": "runtime-witness.json",
+      "sha256": "5cb72d30fdd2039fe1c6a329d7aa453ca7fc953add42e30f4953761e4233bfa0",
+      "generator": "immiscible_u_tube_equal_density_pressure_error",
+      "case_set": "Development-3-seeds-101-202-303",
+      "source_commit": "41b763582970b581753ecac790648582f18d9c0a"
+    }
+  },
+  "cases": {
+    "immiscible_u_tube_equal_density_pressure_error_00000101": {
+      "witness_id": "5cb72d30fdd2039fe1c6a329d7aa453ca7fc953add42e30f4953761e4233bfa0",
+      "metadata_path": "immiscible_u_tube_equal_density_pressure_error_00000101/metadata.json",
+      "metadata_sha256": "2d0202b1bfc33e547917e3c867f83c170eca21eeb41775073e1302f6008f18b2"
+    },
+    "immiscible_u_tube_equal_density_pressure_error_00000202": {
+      "witness_id": "5cb72d30fdd2039fe1c6a329d7aa453ca7fc953add42e30f4953761e4233bfa0",
+      "metadata_path": "immiscible_u_tube_equal_density_pressure_error_00000202/metadata.json",
+      "metadata_sha256": "accb80ed503966bb6d2f86ea21551688a77562ee969b22984e0af64cd68c8ad2"
+    },
+    "immiscible_u_tube_equal_density_pressure_error_00000303": {
+      "witness_id": "5cb72d30fdd2039fe1c6a329d7aa453ca7fc953add42e30f4953761e4233bfa0",
+      "metadata_path": "immiscible_u_tube_equal_density_pressure_error_00000303/metadata.json",
+      "metadata_sha256": "f49eb4b4cc621ece72b938c8b5110e3e6992aa69325ed46941b66431e3f2c7db"
+    }
+  },
+  "failures": []
+}
